@@ -307,3 +307,47 @@ if (oranges === 0) {
 } else if (oranges === 0) {
   console.log("also print this") // this will never print due to the first condition
 }
+
+
+// truthy and falsy
+// these are values that represent either true or false when coerced.
+
+if (0 || "" || false || undefined || null || NaN) {
+  console.log("will this print?")
+}
+
+let username = null;
+
+if (!username) {
+  console.log("Hello stranger! please identify yourself")
+} else {
+  console.log(`Welcome ${username}, glad you are here!`)
+}
+
+
+//* Loops
+
+
+/* 
+
+for ( controlVariable; conditionForWhenToContinue; finalExpression ) {
+  code to execute X many times
+}
+
+*/
+
+
+// for ( let potato = 0; potato < 20; potato = potato + 1 ) {
+//   // let potato = 0 (only once at the start)
+
+//   // if (potato < 20) continue with the loop
+
+//   console.log(potato)
+
+//   // potato = potato + 1
+// }
+
+
+for (let i = 20; i < 50; i += 2) {
+  console.log("cooking some pie", i)
+}
