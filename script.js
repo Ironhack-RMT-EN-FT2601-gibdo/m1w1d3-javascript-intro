@@ -351,3 +351,44 @@ for ( controlVariable; conditionForWhenToContinue; finalExpression ) {
 for (let i = 20; i < 50; i += 2) {
   console.log("cooking some pie", i)
 }
+
+
+let encodedString = "B?!*??!n!!*!n?!*?!? !w1!w??!k!o???o!! 1!!???o";
+
+// 1. change all "*" to be "a"
+// 2. remove all "!" and "?"
+// 3. remove everything after the blank space
+
+let secretWord = ""
+
+for (let i = 0; i < encodedString.length; i++) {
+  // console.log(i)
+  // console.log(encodedString[i])
+  let theCharacterToAdd = encodedString[i]
+
+  if (theCharacterToAdd === "*") {
+    theCharacterToAdd = "a"
+  } else if (theCharacterToAdd === "?" || theCharacterToAdd === "!") {
+    // theCharacterToAdd = ""
+    continue // stop the current iteration and move to the next
+  } else if (theCharacterToAdd === " ") {
+    break // stop the loop
+  }
+
+  secretWord = secretWord + theCharacterToAdd
+  // console.log(secretWord)
+
+}
+
+console.log(secretWord)
+
+
+// for (let i = 0; i < 20; i++) {
+
+//   if (i % 2 === 0) {
+//     break
+//     continue
+//   }
+
+//   console.log(i)
+// }
